@@ -201,7 +201,7 @@ class YouTubePlaylistManager:
         playlist_window.geometry("800x600")
 
         # Maak een nieuwe treeview voor de playlist items
-        columns = ("Titel", "Channel", "Date")
+        columns = ("Title", "Channel", "Date")
         tree = ttk.Treeview(
             playlist_window, columns=columns, show="headings", style="Treeview"
         )
