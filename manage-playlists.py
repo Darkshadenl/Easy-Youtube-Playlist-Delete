@@ -191,7 +191,7 @@ class YouTubePlaylistManager:
         # Zoek de playlist titel
         playlist_title = next(
             (p["title"] for p in self.playlists if p["id"] == playlist_id),
-            "Onbekende Playlist",
+            "Unknown Playlist",
         )
 
         # Maak een nieuw window
@@ -201,7 +201,7 @@ class YouTubePlaylistManager:
         playlist_window.geometry("800x600")
 
         # Maak een nieuwe treeview voor de playlist items
-        columns = ("Titel", "Kanaal", "Datum")
+        columns = ("Titel", "Channel", "Date")
         tree = ttk.Treeview(
             playlist_window, columns=columns, show="headings", style="Treeview"
         )
@@ -213,8 +213,8 @@ class YouTubePlaylistManager:
 
         # Stel kolombreedtes in
         tree.column("Titel", width=400)
-        tree.column("Kanaal", width=200)
-        tree.column("Datum", width=150)
+        tree.column("Channel", width=200)
+        tree.column("Date", width=150)
 
         # Voeg scrollbar toe
         scrollbar = ttk.Scrollbar(
@@ -230,7 +230,7 @@ class YouTubePlaylistManager:
         try:
             # Toon laad indicator
             loading_label = tk.Label(
-                playlist_window, text="Items laden...", font=("Arial", 12)
+                playlist_window, text="Loading items...", font=("Arial", 12)
             )
             loading_label.pack(pady=20)
             playlist_window.update()
@@ -261,7 +261,7 @@ class YouTubePlaylistManager:
 
         except Exception as e:
             messagebox.showerror(
-                "Fout", f"Fout bij het ophalen van playlist items: {str(e)}"
+                "Fout", f"Error while retrieving playlist items: {str(e)}"
             )
             playlist_window.destroy()
             return
@@ -283,12 +283,12 @@ class YouTubePlaylistManager:
     def delete_playlists(self):
         if not self.selected_playlists:
             messagebox.showwarning(
-                "Geen selectie", "Selecteer ten minste één playlist om te verwijderen."
+                "No selection", "Select at least one items to delete."
             )
             return
         confirm = messagebox.askyesno(
-            "Bevestigen",
-            f"Weet je zeker dat je de geselecteerde {len(self.selected_playlists)} playlists wilt verwijderen?",
+            "Confirm",
+            f"Are you sure that you want to delete the selected {len(self.selected_playlists)} playlists?",
         )
         if confirm:
             for playlist_id in list(self.selected_playlists):
@@ -301,10 +301,10 @@ class YouTubePlaylistManager:
                     self.selected_playlists.remove(playlist_id)
                 except Exception as e:
                     messagebox.showerror(
-                        "Fout",
-                        f"Fout bij het verwijderen van playlist {playlist_id}: {e}",
+                        "Error",
+                        f"Error while deleting playlist {playlist_id}: {e}",
                     )
-            messagebox.showinfo("Succes", "Geselecteerde playlists zijn verwijderd.")
+            messagebox.showinfo("Succes", "Selected playlists have been deleted.")
 
     def on_window_close(self):
         # Optioneel: cleanup wanneer het hoofdvenster sluit
@@ -321,6 +321,4 @@ def main():
 
 
 if __name__ == "__main__":
-    print("Python versie:", sys.version)
-    print("Tkinter versie:", tk.TkVersion)
     main()
