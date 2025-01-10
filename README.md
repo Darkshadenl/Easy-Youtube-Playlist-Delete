@@ -57,7 +57,7 @@ Darkshadenl-Easy-Youtube-Playlist-Delete/
 3. Search for playlists, select them, and safely delete them.
 
 ## 📜 License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the GNU General Public License. See the [LICENSE](LICENSE) file for details.
 
 ## ⭐ Contribute
 Feel free to open an issue or submit a pull request! 😊
