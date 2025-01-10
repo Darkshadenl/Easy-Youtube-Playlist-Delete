@@ -37,6 +37,8 @@ Darkshadenl-Easy-Youtube-Playlist-Delete/
    Download your YouTube API OAuth2 client credentials and place the file in the project root.
    **I've added a more complete tutorial at the bottom of this readme!**
 
+4. Use Ngrok to enable communication between your device and the web.
+
 5. **Run the application**:
    ```bash
    python manage-playlists.py
@@ -81,19 +83,23 @@ Follow these steps to generate your `credentials.json` file:
 3. **Enable YouTube Data API v3**  
    Go to "APIs & Services" > "Library." Search for **YouTube Data API v3** and enable it.
 
-4. **Set Up OAuth Consent Screen**  
-   Navigate to "OAuth Consent Screen." Choose "External," fill in the required fields, and save.
+4. **Set Up YouTube Data API v3**  
+   Go through the different screens and fill in the details
+   If you use NGrok to enable communication between your app and the outside, register them under the Branding tab.
+   Then create a client under 'Clients'.
+   If it keeps redirecting you to 'Branding', just start an in private browser tab, log in, and try again. That fixed it for me.
 
 5. **Create OAuth Credentials**  
    Go to "Credentials" > "Create Credentials" > "OAuth 2.0 Client IDs." Select "Desktop App" and create.
 
-6. **Download `credentials.json`**  
+7. **Download `credentials.json`**  
    After creating the credentials, click "Download JSON." Save it as `credentials.json`.
+   Can be found under 'Clients'. A small download button is visible under 'Client secrets'.
 
-7. **Move File to Project Folder**  
+9. **Move File to Project Folder**  
    Place the `credentials.json` file in the root directory of the project.
 
-8. **Test the Application**  
+10. **Test the Application**  
    Run the program to verify the credentials work.
 
 Done! You’re ready to manage your YouTube playlists. 🎉
