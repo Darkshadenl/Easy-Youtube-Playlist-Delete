@@ -1,7 +1,7 @@
 # Easy YouTube Playlist Manager
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 ## 🛠️ Overview
 The **Easy YouTube Playlist Manager** is a desktop application that allows you to easily manage your YouTube playlists. 
