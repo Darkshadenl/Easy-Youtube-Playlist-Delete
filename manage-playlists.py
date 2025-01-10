@@ -42,7 +42,7 @@ class YouTubePlaylistManager:
         search_frame = tk.Frame(self.master)
         search_frame.pack(pady=10)
 
-        tk.Label(search_frame, text="Zoeken: ").pack(side=tk.LEFT)
+        tk.Label(search_frame, text="Search: ").pack(side=tk.LEFT)
         self.search_var = tk.StringVar()
         self.search_var.trace_add("write", self.update_playlist_view)
         search_entry = tk.Entry(search_frame, textvariable=self.search_var, width=50)
@@ -69,7 +69,7 @@ class YouTubePlaylistManager:
             style="Treeview",
         )
 
-        self.tree.heading("Title", text="Playlist Naam")
+        self.tree.heading("Title", text="Playlist Name")
         self.tree.heading("Checkbox", text="")
 
         # Stel de kolom breedtes in
@@ -92,10 +92,10 @@ class YouTubePlaylistManager:
         # Delete Knop met moderne styling
         delete_button = tk.Button(
             self.master,
-            text="Verwijderen",
+            text="Delete",
             command=self.delete_playlists,
-            bg="#ff4444",
-            fg="white",
+            bg="#FF0000",
+            # fg="white",
             relief=tk.FLAT,
             padx=20,
             pady=10,
