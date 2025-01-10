@@ -48,8 +48,7 @@ Darkshadenl-Easy-Youtube-Playlist-Delete/
 - Modules: `google-auth`, `google-auth-oauthlib`, `google-api-python-client`, `tk`, `Pillow`.
 
 ## 📸 Screenshots
-<img width="782" alt="app screenshot" src="https://github.com/user-attachments/assets/8a018adf-abfd-49f8-9aae-e25f789ad403" />
-
+<img width="736" alt="app screenshot" src="https://github.com/user-attachments/assets/efc5b2e1-7280-4a53-b56e-1a2bb4b0f8f2" />
 
 ## 💡 How to Use
 1. Launch the application.
